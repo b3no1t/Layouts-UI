@@ -1,0 +1,38 @@
+/* 
+ Layout b 
+ display flex
+ author: Viensay
+*/
+
+.container {
+  width: 80%;
+  margin: 5rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  div {
+    background-color: grey;
+    width: 25%;
+    height: 30vh;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .container {
+    div {
+      flex: 1 0 20%;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    div:nth-child(1) {
+      width: 85%;
+    }
+    div {
+      width: 25%;
+    }
+  }
+}

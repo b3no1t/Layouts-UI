@@ -1,0 +1,9 @@
+:root {
+ --color-dark: #073642;
+ --color-darkish: #586e75;
+ --color-light: #eee8d5;
+ --color-lightish: #fdf6e3;
+ --color-accent: #2aa198;
+ --color-error: #dc322f;
+ --measure: 65ch;
+}

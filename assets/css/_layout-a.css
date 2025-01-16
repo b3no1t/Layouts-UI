@@ -1,0 +1,32 @@
+@import "_vars.css";
+.container-layout-a {
+  display: flex;
+  margin-inline: auto;
+  flex-direction: column;
+}
+main {
+  height: 67vh;
+}
+aside {
+  background-color: var(--color-darkish);
+  height: 33vh;
+}
+
+@media screen and (min-width: 800px) {
+  main,
+  aside {
+    height: 100svh;
+  }
+  main {
+    flex-basis: 67%;
+    background-color: var(--color-light);
+  }
+  aside {
+    flex-basis: 33.33%;
+  }
+
+  .container-layout-a {
+    flex-direction: row;
+  }
+}
+
