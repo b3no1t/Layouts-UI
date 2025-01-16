@@ -1,0 +1,105 @@
+/* Main global style */
+
+@layers buttons,components, demo, reset;
+
+@layer reset {
+  *,
+  :after,
+  :before {
+    box-sizing: border-box;
+    background-color: inherit;
+    font-family: inherit;
+    color: inherit;
+    overflow-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+  }
+}
+
+@layer demo {
+  :root {
+    --color-dark: #073642;
+    --color-darkish: #586e75;
+    --color-light: #eee8d5;
+    --color-lightish: #fdf6e3;
+    --color-accent: #2aa198;
+    --color-error: #dc322f;
+    --measure: 65ch;
+  }
+  html {
+    background-color: var(--color-light);
+  }
+  h1,h2,h3,p{
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+   Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+   sans-serif;
+   color: var(--color-darkish);
+   margin-bottom: 1rem;
+  }
+  h1{
+   font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+   img {
+     max-width: 100%;
+     height: auto;
+   }
+   main{
+    display: flex;
+    gap: .65rem;
+   }
+}
+
+@layer components {
+
+  .container {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 0 15px;
+    display: flex;
+    gap: 1.2rem;
+    flex-direction: column;
+    margin-top:  2rem;
+  }
+  .card {
+    background-color: var(--color-lightish);
+    flex: 1 0 33.33%;
+    padding: 15px;
+    max-width: 33%;
+    box-shadow: inset -.25rem -.25rem 0 #ddddddb9;
+    & img{
+     margin-bottom: 1rem;
+    }
+
+  }
+
+  .card a {
+    text-decoration: none;
+    color: var(--base03);
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .inner_card {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+ }
+
+@layer buttons {
+  .cta {
+    font-size: inherit;
+    font-weight: 700;
+    display: inline-block;
+    line-height: 1.1;
+    color: var(--color-darkish);
+    padding: 0.5em 1.5em 0.7em;
+    border-width: .2rem;
+    &:hover{
+     background-color: var(--color-dark);
+     color: var(--color-light);
+     border-color: var(--color-dark);
+    }
+  }
+
+}
