@@ -1,0 +1,30 @@
+/* 
+* page: layout-sidebar.html
+* author: Benoit
+*/
+
+.sidebar {
+ display: flex;
+ flex-direction: column;
+ @media  screen and (min-width:800px) {
+  flex-direction: row;
+ }
+}
+
+.sidebar__sidebar {
+ width: 100%;
+ background-color: lightgray;
+ @media  screen and (min-width:800px) {
+  width: 30%;
+ }
+}
+
+.sidebar__main {
+background-color: lightcyan;
+
+ /* Take the remaining width */
+ flex: 1;
+
+ /* Make it scrollable */
+ overflow: auto;
+}
